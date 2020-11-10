@@ -1,3 +1,7 @@
+Тестовое задания для 
+<a href='https://github.com/RoboFinance/test-assignments/blob/main/tasks/php_dev_assignment.md'>Robofinance</a>
+
+
 От корня проекта
 <p><code>cd laradock</code></p>
 Поднимаем докер

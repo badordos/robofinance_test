@@ -1,9 +1,12 @@
 Тестовое задания для 
 <a href='https://github.com/RoboFinance/test-assignments/blob/main/tasks/php_dev_assignment.md'>Robofinance</a>
 
+Не забываем клонировать рекурсивно <code>git clone *** --recursive</code>
 
-От корня проекта
+Входим в докер
 <p><code>cd laradock</code></p>
+Копируем .env файл docker
+<p><code>cp env-example .env</code></p>
 Поднимаем докер
 <p><code>docker-compose up -d nginx mysql redis workspace</code></p>
 Входим в рабочее пространство
@@ -12,8 +15,7 @@
 <p><code>cp env-example .env</code></p>
 Устанавливаем вендоры
 <p><code>composer install</code></p>
-Устанавливаем ui на bootstrap
-<p><code>php artisan ui bootstrap --auth</code></p>
+
 Собираем фронт
 <p><code>npm install</code></p>
 <p><code>npm update</code></p>

@@ -16,7 +16,7 @@ class RemittanceRepo
     public function getNotDoneRemittancesByUser(int $userId)
     {
         return Remittance::where('payer_id', $userId)
-            ->where('done', 0)
+            ->where('status', 'created')
             ->sum('value');
     }
 

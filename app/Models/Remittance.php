@@ -10,11 +10,16 @@ class Remittance extends Model implements IRemittance
 {
     use HasFactory;
 
+    const STATUS_CREATED = 'created';
+    const STATUS_DONE = 'done';
+    const STATUS_FAILED = 'failed';
+
     protected $fillable = [
         'payer_id',
         'recipient_id',
         'value',
         'do_at',
+        'status'
     ];
 
     protected $with = [
@@ -29,12 +34,24 @@ class Remittance extends Model implements IRemittance
         return $this->do_at;
     }
 
-    public function getPayerId(){
+    public function getPayerId()
+    {
         return $this->payer_id;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
+    }
+
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    public function setStatus(string $status)
+    {
+        $this->status = $status;
     }
 
     //RELATIONS

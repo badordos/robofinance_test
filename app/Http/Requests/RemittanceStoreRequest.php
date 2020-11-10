@@ -25,8 +25,8 @@ class RemittanceStoreRequest extends FormRequest
     {
         return [
             'value' => 'required|numeric|min:1|max:9999999999',
-            'payer_id' => 'required|numeric',
-            'recipient_id' => 'required|numeric|different:payer_id',
+            'payer_id' => 'required|numeric|min:1',
+            'recipient_id' => 'required|numeric|min:1|different:payer_id',
             'do_at' => 'required|date|after:now',
         ];
     }

@@ -13,6 +13,8 @@ class RemittanceController extends Controller
      */
     private $remittanceService;
 
+    const SUCCESS_STORE_MSG = 'Перевод запланирован';
+
     /**
      * RemittanceController constructor.
      */
@@ -29,6 +31,6 @@ class RemittanceController extends Controller
     {
         $dto = RemittanceDto::createFromRequest($request);
         $this->remittanceService->store($dto);
-        return back()->with('message', 'Перевод запланирован');
+        return back()->with('message', self::SUCCESS_STORE_MSG);
     }
 }

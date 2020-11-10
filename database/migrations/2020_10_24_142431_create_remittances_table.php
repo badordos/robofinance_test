@@ -24,9 +24,8 @@ class CreateRemittancesTable extends Migration
             $table->timestamps();
             $table->timestamp('do_at')
                 ->comment('Выполнение запланировано на это время');
-            $table->boolean('done')
-                ->default(0)
-                ->comment('Платеж проведен');
+            $table->string('status')
+                ->comment('Состояние платежа');
 
             $table->foreign('payer_id')->references('id')->on('users');
             $table->foreign('recipient_id')->references('id')->on('users');

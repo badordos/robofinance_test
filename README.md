@@ -23,4 +23,7 @@
 Включаем слушатель очереди
 <p><code>php artisan queue:listen</code></p>
 
+Запуск тестов
+<p><code>phpunit</code></p>
+
 Если окружение стоит в <code>APP_ENV=local</code> - переводы будут для теста всегда выполнятся через 10 секунд

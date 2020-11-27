@@ -98,6 +98,7 @@ class RemittanceService extends AbstractService
      */
     public function doRemittance(IRemittance $remittance)
     {
+        //TODO DB::transaction
         $payer = $remittance->payer;
         $recipient = $remittance->recipient;
 
